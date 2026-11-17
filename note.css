@@ -1,0 +1,46 @@
+/* Keep the long love letter comfortable to read and delicately styled. */
+.note-card {
+  min-height: 0;
+  padding: clamp(30px, 4vw, 48px) clamp(24px, 5vw, 60px) 30px;
+}
+.note-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.note-copy p {
+  margin: 0 0 1.05rem;
+  color: #49352a;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.9;
+}
+.note-copy p:first-child::first-letter {
+  color: #8d5f3d;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.note-signoff {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.4rem;
+  color: #70452f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: right;
+}
+.note-signoff span { color: #a56d43; font-style: normal; }
+@media (max-width: 760px) {
+  .note-card { padding: 38px 22px 26px; }
+  .note-copy p { font-size: 0.98rem; line-height: 1.8; }
+  .note-signoff { margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .note-card { transition: none; }
+}
