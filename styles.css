@@ -1,16 +1,16 @@
 :root {
-  --bg: #fff8f9;
-  --bg-soft: #ffeaf0;
-  --panel: rgba(255, 255, 255, 0.72);
-  --panel-strong: #ffffff;
-  --ink: #301b2a;
-  --muted: #6b5561;
-  --rose: #f26a8d;
-  --rose-deep: #d64a75;
-  --peach: #ffd7d9;
-  --gold: #f7d7af;
-  --shadow: rgba(118, 77, 93, 0.18);
-  --border: rgba(126, 78, 97, 0.12);
+  --bg: #fff7e9;
+  --bg-soft: #f5dfc2;
+  --panel: rgba(255, 250, 239, 0.88);
+  --panel-strong: #fffaf0;
+  --ink: #3e251b;
+  --muted: #765744;
+  --rust: #a64b2a;
+  --rust-deep: #7e341f;
+  --copper: #c77945;
+  --gold: #d7a45b;
+  --shadow: rgba(91, 48, 27, 0.16);
+  --border: rgba(126, 67, 37, 0.18);
 }
 
 * {
@@ -22,19 +22,59 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 215, 217, 0.9) 0%, transparent 32%),
-    radial-gradient(circle at bottom right, rgba(247, 215, 175, 0.6), transparent 28%),
-    linear-gradient(135deg, #fffafc 0%, #fff4f6 40%, #fffaf7 100%);
+    radial-gradient(ellipse at 12% 8%, rgba(216, 154, 87, 0.28), transparent 34%),
+    radial-gradient(ellipse at 88% 55%, rgba(176, 85, 46, 0.14), transparent 35%),
+    linear-gradient(145deg, #fff8e9 0%, #f5dfc2 48%, #f2d2ae 100%);
   color: var(--ink);
 }
 
-img {
-  max-width: 100%;
-  display: block;
+.heart-rain {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart-rain span {
+  position: absolute;
+  top: -12vh;
+  left: var(--left);
+  color: var(--heart-color);
+  font-size: var(--size);
+  opacity: 0;
+  animation: heart-fall var(--duration) linear var(--delay) infinite;
+  filter: drop-shadow(0 3px 5px rgba(104, 51, 26, 0.12));
+}
+
+.heart-rain span:nth-child(5n + 1) { --left: 4%; --size: 18px; --duration: 12s; --delay: -2s; --heart-color: #a64b2a; }
+.heart-rain span:nth-child(5n + 2) { --left: 14%; --size: 13px; --duration: 15s; --delay: -9s; --heart-color: #c77945; }
+.heart-rain span:nth-child(5n + 3) { --left: 25%; --size: 22px; --duration: 13s; --delay: -5s; --heart-color: #8d3f27; }
+.heart-rain span:nth-child(5n + 4) { --left: 37%; --size: 15px; --duration: 17s; --delay: -12s; --heart-color: #d0924f; }
+.heart-rain span:nth-child(5n) { --left: 48%; --size: 19px; --duration: 14s; --delay: -7s; --heart-color: #a64b2a; }
+.heart-rain span:nth-child(5n + 1):nth-child(n + 6) { --left: 59%; }
+.heart-rain span:nth-child(5n + 2):nth-child(n + 7) { --left: 70%; }
+.heart-rain span:nth-child(5n + 3):nth-child(n + 8) { --left: 81%; }
+.heart-rain span:nth-child(5n + 4):nth-child(n + 9) { --left: 91%; }
+
+@keyframes heart-fall {
+  0% { transform: translate3d(0, -5vh, 0) rotate(-12deg); opacity: 0; }
+  10% { opacity: 0.58; }
+  85% { opacity: 0.48; }
+  100% { transform: translate3d(35px, 115vh, 0) rotate(24deg); opacity: 0; }
+}
+
+.topbar,
+main,
+.footer {
+  position: relative;
+  z-index: 3;
 }
 
 .topbar {
@@ -49,9 +89,9 @@ img {
   padding: 14px 22px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 249, 235, 0.82);
   backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(90, 58, 70, 0.06);
+  box-shadow: 0 10px 30px rgba(90, 58, 38, 0.08);
 }
 
 .brand {
@@ -59,7 +99,7 @@ img {
   font-size: clamp(2rem, 2vw, 2.4rem);
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--rose-deep);
+  color: var(--rust-deep);
 }
 
 nav {
@@ -76,7 +116,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--rose-deep);
+  color: var(--rust-deep);
 }
 
 main {
@@ -99,7 +139,7 @@ main {
 
 .eyebrow {
   margin: 0 0 18px;
-  color: var(--rose-deep);
+  color: var(--rust-deep);
   font-weight: 700;
   letter-spacing: 0.14rem;
   text-transform: uppercase;
@@ -116,7 +156,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--rose-deep);
+  color: var(--rust);
 }
 
 .intro {
@@ -150,14 +190,14 @@ h1 span {
 }
 
 .primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
-  box-shadow: 0 18px 36px rgba(242, 106, 141, 0.25);
+  color: #fffaf0;
+  background: linear-gradient(135deg, var(--copper) 0%, var(--rust-deep) 100%);
+  box-shadow: 0 18px 36px rgba(166, 75, 42, 0.25);
 }
 
 .secondary {
-  color: var(--rose-deep);
-  background: rgba(255, 255, 255, 0.7);
+  color: var(--rust-deep);
+  background: rgba(255, 250, 239, 0.78);
   border: 1px solid var(--border);
 }
 
@@ -175,16 +215,16 @@ h1 span {
   width: min(100%, 440px);
   aspect-ratio: 4 / 5;
   border-radius: 32px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 214, 217, 0.9));
-  border: 1px solid rgba(121, 67, 86, 0.1);
-  box-shadow: 0 35px 80px rgba(119, 72, 91, 0.12);
+  background: linear-gradient(135deg, rgba(255, 250, 239, 0.82), rgba(215, 164, 91, 0.46));
+  border: 1px solid var(--border);
+  box-shadow: 0 35px 80px rgba(91, 48, 27, 0.16);
 }
 
 .photo-glow {
   position: absolute;
   inset: 18px;
   border-radius: 28px;
-  background: linear-gradient(145deg, rgba(242, 106, 141, 0.18), rgba(247, 215, 175, 0.3));
+  background: linear-gradient(145deg, rgba(199, 121, 69, 0.24), rgba(215, 164, 91, 0.32));
 }
 
 .photo-inner {
@@ -193,16 +233,16 @@ h1 span {
   width: 72%;
   height: 72%;
   border-radius: 50% 50% 42% 42%;
-  background: linear-gradient(180deg, #ffd9e1 0%, #f4b9c7 45%, #e6a5b8 100%);
+  background: linear-gradient(180deg, #efd0a0 0%, #d89a64 48%, #a95738 100%);
   display: grid;
   place-items: center;
-  box-shadow: inset 0 -18px 30px rgba(171, 71, 101, 0.12);
+  box-shadow: inset 0 -18px 30px rgba(91, 48, 27, 0.16);
 }
 
 .photo-inner span {
   font-size: clamp(5rem, 8vw, 8rem);
   line-height: 1;
-  color: rgba(214, 74, 117, 0.8);
+  color: rgba(126, 52, 31, 0.84);
 }
 
 .mini-note {
@@ -210,8 +250,8 @@ h1 span {
   padding: 14px 18px;
   border-radius: 14px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 12px 30px rgba(96, 56, 73, 0.08);
+  background: rgba(255, 250, 239, 0.86);
+  box-shadow: 0 12px 30px rgba(96, 56, 38, 0.08);
 }
 
 .mini-note p {
@@ -230,14 +270,15 @@ h1 span {
 
 .section-heading p {
   margin: 0 0 8px;
-  color: var(--rose-deep);
+  color: var(--rust-deep);
   font-weight: 700;
   letter-spacing: 0.14rem;
   text-transform: uppercase;
   font-size: 0.72rem;
 }
 
-.section-heading h2 {
+.section-heading h2,
+.love-note-title {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.5rem, 4vw, 4rem);
@@ -254,8 +295,8 @@ h1 span {
   padding: 26px 22px;
   border: 1px solid var(--border);
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.64);
-  box-shadow: 0 22px 48px rgba(87, 48, 60, 0.04);
+  background: var(--panel);
+  box-shadow: 0 22px 48px rgba(87, 48, 30, 0.06);
 }
 
 .story-grid span {
@@ -265,8 +306,8 @@ h1 span {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--peach), rgba(242, 106, 141, 0.15));
-  color: var(--rose-deep);
+  background: linear-gradient(135deg, #f1d4a9, rgba(199, 121, 69, 0.2));
+  color: var(--rust-deep);
   font-weight: 800;
 }
 
@@ -276,8 +317,7 @@ h1 span {
 }
 
 .story-grid p,
-.moment-card p,
-blockquote {
+.moment-card p {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.8;
@@ -296,12 +336,12 @@ blockquote {
   padding: 24px 20px;
   border: 1px solid var(--border);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--panel);
 }
 
 .moment-card span {
   display: inline-block;
-  color: var(--rose-deep);
+  color: var(--rust);
   font-size: 1.3rem;
   line-height: 1;
   margin-top: 6px;
@@ -315,16 +355,23 @@ blockquote {
   padding-bottom: 72px;
 }
 
+.love-note-title {
+  margin: 0 0 22px;
+  color: var(--rust-deep);
+}
+
 blockquote {
   margin: 0;
-  padding: 34px 28px;
-  border-left: 4px solid var(--rose-deep);
+  padding: 30px 28px;
+  border-left: 4px solid var(--rust);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 3vw, 2.9rem);
-  line-height: 1.2;
+  background: var(--panel);
+  box-shadow: 0 18px 50px rgba(91, 48, 27, 0.08);
   color: var(--ink);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 2;
+  white-space: normal;
 }
 
 .footer {
@@ -365,5 +412,22 @@ blockquote {
 
   .actions a {
     width: 100%;
+  }
+
+  blockquote {
+    padding: 24px 18px;
+    line-height: 1.85;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .heart-rain span {
+    animation: none;
+    opacity: 0.25;
+    top: 8vh;
   }
 }
