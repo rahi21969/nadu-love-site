@@ -3,75 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3f1224" />
+    <meta name="theme-color" content="#5b281f" />
     <title>For My Jaan Nadu</title>
+    <meta name="description" content="A little love note and a collection of favorite moments for Nadu." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="page-frame">
-      <header class="browser-topbar">
-        <div class="title-strip">
-          <div class="title-pill">
-            <span class="tab-icon">◌</span>
-            <span>For My Jaan Nadu</span>
-            <span class="close-btn">×</span>
-          </div>
-        </div>
-
-        <div class="browser-toolbar">
-          <div class="toolbar-left">
-            <button aria-label="Back">←</button>
-            <button aria-label="Forward">→</button>
-            <button aria-label="Refresh">↻</button>
-          </div>
-
-          <div class="address-bar">
-            <span class="lock">🔒</span>
-            <span>rani21969.github.io/nadu-love-site/</span>
-          </div>
-
-          <div class="toolbar-right">
-            <button class="gemini-btn">Ask Gemini</button>
-            <button class="menu-btn">☰</button>
-          </div>
-        </div>
-      </header>
-
-      <main class="main-surface">
-        <div class="inner-addressbar">
-          <span class="lock-small">🔒</span>
-          <span>rani21969.github.io/nadu-love-site/#love-note</span>
-          <button class="gemini-mini">Ask Gemini</button>
-          <button class="hamburger">≡</button>
-        </div>
-
-        <div class="content-wrap">
-          <nav class="top-nav" aria-label="Main navigation">
-            <div class="brand">Nadu</div>
-            <div class="nav-links">
-              <a href="#story">Our Story</a>
-              <a href="#moments">Moments</a>
-              <a href="#love-note">Love Note</a>
-            </div>
-          </nav>
-
-          <section class="love-section" id="love-note">
-            <div class="section-label">A LITTLE NOTE</div>
-            <div class="note-card">
-              <div class="quote-mark">“</div>
-              <p>
-                “Nadu, you are my favorite person in every universe, in every dream,
-                and in every version of my life. I love you more than words can hold,
-                and I am endlessly grateful for the love we share. You are my heart’s
-                truest home.”
-              </p>
-            </div>
-          </section>
-        </div>
-      </main>
+    <div class="falling-hearts" aria-hidden="true">
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
     </div>
+
+    <main class="page-shell" id="top">
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="brand" href="#top">Nadu</a>
+        <div class="nav-links">
+          <a href="#story">Our Story</a>
+          <a href="#moments">Moments</a>
+          <a href="#love-note">Love Note</a>
+        </div>
+      </nav>
+
+      <section class="love-section" id="love-note">
+        <p class="eyebrow">A little note</p>
+        <article class="note-card">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>Nadu, you are my favorite person in every universe, in every dream, and in every version of my life. I love you more than words can hold, and I am endlessly grateful for the love we share. You are my heart’s truest home.</p>
+        </article>
+      </section>
+
+      <section class="moments" id="moments">
+        <div class="section-heading">
+          <p class="eyebrow">Little pieces of us</p>
+          <h2>Our favorite moments</h2>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card photo-card-featured">
+            <img src="images/photo%201.jpeg" alt="A favorite memory together" loading="lazy" />
+          </figure>
+          <figure class="photo-card">
+            <img src="images/photo%202.jpeg" alt="A special moment together" loading="lazy" />
+          </figure>
+          <figure class="photo-card">
+            <img src="images/photo%203.jpeg" alt="Another lovely memory together" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <p class="eyebrow">With you, every season is beautiful</p>
+        <h2>Our Story</h2>
+        <p class="story-copy">Every chapter of life feels brighter with you in it. From the first smile to the many little moments in between, you have become the calm in my chaos and the joy in every day. This page is a small reminder of how deeply I love you and how lucky I feel to call you mine.</p>
+      </section>
+
+      <footer class="footer-note">Made with love, for Nadu <span aria-hidden="true">♥</span></footer>
+    </main>
   </body>
 </html>
