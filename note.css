@@ -37,32 +37,38 @@
 }
 .note-signoff span { color: #a56d43; font-style: normal; }
 
-/* A little teddy-bear gift at the end of the letter. */
+/* A single little teddy, personalized for Nadu. */
 .teddy-trio {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap: clamp(8px, 2vw, 20px);
+  align-items: center;
+  gap: 10px;
   margin: 1.5rem auto 0.4rem;
-  padding: 14px 24px 10px;
+  padding: 12px 20px;
   width: fit-content;
-  border: 1px solid rgba(151, 105, 68,  0.18);
+  border: 1px solid rgba(151, 105, 68, 0.2);
   border-radius: 999px;
-  background: rgba(255, 248, 235, 0.42);
+  background: rgba(255, 248, 235, 0.5);
   box-shadow: 0 8px 20px rgba(87, 54, 31, 0.08);
 }
-.teddy-trio span {
+.teddy-emoji {
   display: inline-block;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: 2.45rem;
   line-height: 1;
   filter: drop-shadow(0 4px 3px rgba(87, 54, 31, 0.12));
   animation: teddy-bob 2.8s ease-in-out infinite;
 }
-.teddy-trio span:nth-child(2) { animation-delay: 180ms; transform: scale(1.12); }
-.teddy-trio span:nth-child(3) { animation-delay: 360ms; }
+.teddy-name {
+  color: #70452f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.teddy-heart { color: #bd5969; font-size: 0.9rem; }
 @keyframes teddy-bob {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -5px; }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 /* 15 additional hearts: a fuller but still gentle autumn shower. */
@@ -87,9 +93,9 @@
   .note-card { padding: 38px 22px 26px; }
   .note-copy p { font-size: 0.98rem; line-height: 1.8; }
   .note-signoff { margin-top: 1rem; }
-  .teddy-trio { margin-top: 1.2rem; }
+  .teddy-trio { margin-top: 1.2rem; padding: 10px 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .note-card { transition: none; }
-  .teddy-trio span { animation: none; }
+  .teddy-emoji { animation: none; }
 }
