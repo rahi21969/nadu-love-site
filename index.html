@@ -4,134 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For My Jaan Nadu</title>
-    <meta
-      name="description"
-      content="A personal love page dedicated to my jaan, Nadu."
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="heart-rain" aria-hidden="true">
-      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
-      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
-      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
-      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+    <div class="page-shell">
+      <header class="browser-bar">
+        <div class="browser-left">
+          <button class="nav-button" aria-label="Back">←</button>
+          <button class="nav-button" aria-label="Forward">→</button>
+          <button class="nav-button" aria-label="Refresh">⟳</button>
+        </div>
+
+        <div class="address-bar-wrap">
+          <div class="lock">🔒</div>
+          <div class="address-bar">rani21969.github.io/nadu-love-site/#love-note</div>
+        </div>
+
+        <div class="browser-right">
+          <button class="pill-button">Ask Gemini</button>
+          <button class="icon-button" aria-label="Menu">☰</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <nav class="top-nav" aria-label="Main navigation">
+          <div class="brand">Nadu</div>
+          <div class="nav-links">
+            <a href="#story">Our Story</a>
+            <a href="#moments">Moments</a>
+            <a href="#love-note">Love Note</a>
+          </div>
+        </nav>
+
+        <section class="love-section" id="love-note">
+          <div class="section-label">A Little Note</div>
+          <div class="note-card">
+            <div class="quote-mark">“</div>
+            <p>
+              Nadu, you are my favorite person in every universe, in every dream, and in every
+              version of my life. I love you more than words can hold, and I am endlessly grateful
+              for the love we share. You are my heart’s truest home.
+            </p>
+          </div>
+        </section>
+
+        <section class="moments" id="moments">
+          <div class="section-header">
+            <h2>Moments</h2>
+          </div>
+
+          <div class="photo-grid">
+            <figure class="photo-card tall-card">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                alt="Two people sharing a romantic moment"
+              />
+            </figure>
+            <figure class="photo-card">
+              <img
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
+                alt="Couple walking together outdoors"
+              />
+            </figure>
+            <figure class="photo-card">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+                alt="Couple embracing in a romantic setting"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section class="story" id="story">
+          <div class="section-header">
+            <h2>Our Story</h2>
+          </div>
+          <div class="story-card">
+            <p>
+              Every chapter of life feels brighter with you in it. From the first smile to the many
+              little moments in between, you have become the calm in my chaos and the joy in every day.
+              This page is a small reminder of how deeply I love you and how lucky I feel to call you mine.
+            </p>
+          </div>
+        </section>
+      </main>
     </div>
-
-    <header class="topbar">
-      <div class="brand">Nadu</div>
-      <nav aria-label="Main navigation">
-        <a href="#story">Our Story</a>
-        <a href="#moments">Moments</a>
-        <a href="#love-note">Love Note</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">To my forever favorite person</p>
-          <h1>For my jaan, <span>Nadu</span></h1>
-          <p class="intro">
-            Every day with you feels like a little miracle — warm, gentle, and full of love.
-            You are my peace, my joy, and the reason my heart feels at home.
-          </p>
-          <div class="actions">
-            <a class="primary" href="#love-note">Read My Heart</a>
-            <a class="secondary" href="https://github.com/copilot/share/42244324-4824-8631-a812-060640df2961" target="_blank" rel="noopener noreferrer">Project Session</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="photo-frame">
-            <div class="photo-glow"></div>
-            <div class="photo-inner">
-              <span>♥</span>
-            </div>
-          </div>
-          <div class="mini-note">
-            <p>My favorite place is wherever you are.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="story" class="story section-shell">
-        <div class="section-heading">
-          <p>Our Story</p>
-          <h2>How you became my favorite part of life</h2>
-        </div>
-
-        <div class="story-grid">
-          <article>
-            <span>01</span>
-            <h3>It started with a smile</h3>
-            <p>
-              One look, one smile, and everything else faded away. You became the kind of person
-              I could not stop thinking about.
-            </p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>It grew into a feeling</h3>
-            <p>
-              What began as a simple connection turned into something deeper — a warmth that stays
-              with me in every quiet moment.
-            </p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>It became forever</h3>
-            <p>
-              Now you are not just someone I love — you are my home, my comfort, and the dream I
-              want to keep living every day.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="moments" class="moments section-shell">
-        <div class="section-heading">
-          <p>Little Moments</p>
-          <h2>Things I adore about you</h2>
-        </div>
-
-        <div class="moments-list">
-          <div class="moment-card">
-            <span>✦</span>
-            <p>Your laughter turns ordinary days into beautiful ones.</p>
-          </div>
-          <div class="moment-card">
-            <span>✦</span>
-            <p>Your kindness makes the whole world feel softer.</p>
-          </div>
-          <div class="moment-card">
-            <span>✦</span>
-            <p>Your presence makes my heart feel safer and calmer.</p>
-          </div>
-          <div class="moment-card">
-            <span>✦</span>
-            <p>I love you in ways that words can only begin to explain.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="love-note" class="love-note section-shell">
-        <p class="eyebrow">A letter from my heart</p>
-        <h2 class="love-note-title">Meri jaan, Nadu</h2>
-        <blockquote>
-          meri jaan nadu i can't express in word how much you mean to me like in no time i can't express from the first time to this time i can't even imagine like from no talk to talk all the time every night and day maine kabhi b nhi socha tha hum itna close honge ya itna frank honge ek dusre k sath aur sach mai muje nhi pata tha muje itna pyaar hotaa apke sath ya apko b mujse pyaar hota itna maine kabhi nhi socha tha but shukur allah ka ye din b naseeb huwe ki maine niyaaz daala tha humari baat ho hum ek dusre k leye bane agr ek dusre k leye thk nhi h hume thk are allah tala aur hume humesha sath rakhe aur usne meri sunn li shyd ap meri kissi neki ka phaalll ho aur mai bohat shukur guzar hu allah ka aur humesha rahuga aur allah tala hume sath rakhe aur humari shadi karaye in sha allah jldi jldi aur mai iss qabil ho ki apka papa jldi se haan kare uske leye mai bohat mehnat kruga ki sab haan bolde bina kuch bole aur humara rishta khushi khushi accept kare im very glad that you are in my life and ik that you are also happy because im in your life and now may allah protect us from evil eyes and evil concerns, apne mujse pucha tha na muje ap mai kya pasand ayaa tou muje ap mai apka character,loyalty,understanding,cuteness,inteeligent, and most important that you are mine that's what i love the most about you and may allah always protect us and keep us together untill out last breath may allah make us each others safsest place where we can share everything without asking and without judging each other may allah make us that much comfortable with each other ans yes i will say that ki iloveyou more than anything thank you for being in my life and make me a happy person again
-        </blockquote>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Made with all my love for my jaan, Nadu</p>
-    </footer>
   </body>
 </html>
