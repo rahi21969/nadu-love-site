@@ -200,7 +200,8 @@ a { color: inherit; }
 .photo-card-two { z-index: 1; height: clamp(310px, 39vw, 470px); transform: rotate(1deg); }
 .photo-card-three { transform: rotate(2.1deg) translateY(14px); }
 .photo-card:hover { z-index: 2; transform: translateY(-8px) rotate(0); box-shadow: 0 24px 48px rgba(67, 33, 22, 0.23); }
-.photo-card img { width: 100%; height: 100%; border-radius: 15px; object-fit: cover; }
+.photo-card img { width: 100%; height: 100%; border-radius: 15px; object-fit: cover; transition: transform 500ms ease; }
+.photo-card:hover img { transform: scale(1.045); }
 .photo-card figcaption { position: absolute; right: 10px; bottom: 11px; left: 10px; color: #755447; font-family: "Cormorant Garamond", serif; font-size: 1.35rem; font-style: italic; text-align: center; }
 
 .story {
@@ -245,4 +246,33 @@ a { color: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* Premium warm-brown treatment for the navigation and love-note area. */
+.top-nav {
+  border-color: rgba(255, 248, 232, 0.62);
+  background: linear-gradient(135deg, #fff8ec 0%, #f5e6d1 100%);
+  box-shadow: 0 18px 44px rgba(74, 43, 26, 0.2), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.brand { color: #74442f; }
+.brand-heart { color: #ad7252; }
+.nav-links a { color: #684a39; }
+.nav-links a:hover { color: #9a603d; }
+.love-section > .eyebrow { color: #70452f; }
+.love-section > .eyebrow span { color: #b98750; }
+.note-card {
+  border: 1px solid rgba(255, 248, 235, 0.88);
+  border-left: 5px solid #a56d43;
+  background: linear-gradient(135deg, rgba(255, 250, 241, 0.97), rgba(246, 232, 211, 0.96));
+  box-shadow: 0 22px 58px rgba(74, 43, 26, 0.2), inset 0 1px 0 rgba(255,255,255,0.95);
+}
+.note-card:hover { box-shadow: 0 28px 64px rgba(74, 43, 26, 0.24), inset 0 1px 0 rgba(255,255,255,0.95); }
+.note-card p { color: #422e25; }
+.quote-mark { color: rgba(143, 91, 56, 0.24); }
+.note-card::before { color: rgba(161, 105, 61, 0.25); }
+.note-card::after { border-color: rgba(143, 91, 56, 0.16); }
+.note-signoff { color: #70452f; }
+.note-signoff span { color: #a56d43; }
+@media (max-width: 760px) {
+  .top-nav { background: linear-gradient(135deg, #fff8ec 0%, #f5e6d1 100%); }
 }
