@@ -36,11 +36,60 @@
   text-align: right;
 }
 .note-signoff span { color: #a56d43; font-style: normal; }
+
+/* A little teddy-bear gift at the end of the letter. */
+.teddy-trio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(8px, 2vw, 20px);
+  margin: 1.5rem auto 0.4rem;
+  padding: 14px 24px 10px;
+  width: fit-content;
+  border: 1px solid rgba(151, 105, 68,  0.18);
+  border-radius: 999px;
+  background: rgba(255, 248, 235, 0.42);
+  box-shadow: 0 8px 20px rgba(87, 54, 31, 0.08);
+}
+.teddy-trio span {
+  display: inline-block;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+  filter: drop-shadow(0 4px 3px rgba(87, 54, 31, 0.12));
+  animation: teddy-bob 2.8s ease-in-out infinite;
+}
+.teddy-trio span:nth-child(2) { animation-delay: 180ms; transform: scale(1.12); }
+.teddy-trio span:nth-child(3) { animation-delay: 360ms; }
+@keyframes teddy-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -5px; }
+}
+
+/* 15 additional hearts: a fuller but still gentle autumn shower. */
+.falling-hearts span:nth-child(n + 16) { left: var(--left); }
+.falling-hearts span:nth-child(16) { --left: 7%; --size: 15px; --duration: 18s; --delay: -8s; --heart-color: #b95d4d; }
+.falling-hearts span:nth-child(17) { --left: 14%; --size: 11px; --duration: 22s; --delay: -15s; --heart-color: #d09358; }
+.falling-hearts span:nth-child(18) { --left: 23%; --size: 18px; --duration: 16s; --delay: -5s; --heart-color: #a84c49; }
+.falling-hearts span:nth-child(19) { --left: 30%; --size: 13px; --duration: 20s; --delay: -17s; --heart-color: #ca7356; }
+.falling-hearts span:nth-child(20) { --left: 38%; --size: 16px; --duration: 17s; --delay: -9s; --heart-color: #b94d51; }
+.falling-hearts span:nth-child(21) { --left: 46%; --size: 12px; --duration: 21s; --delay: -13s; --heart-color: #d38642; }
+.falling-hearts span:nth-child(22) { --left: 54%; --size: 19px; --duration: 19s; --delay: -6s; --heart-color: #a64b37; }
+.falling-hearts span:nth-child(23) { --left: 62%; --size: 13px; --duration: 23s; --delay: -20s; --heart-color: #c76154; }
+.falling-hearts span:nth-child(24) { --left: 70%; --size: 17px; --duration: 16s; --delay: -10s; --heart-color: #d0924c; }
+.falling-hearts span:nth-child(25) { --left: 77%; --size: 12px; --duration: 20s; --delay: -14s; --heart-color: #a84c49; }
+.falling-hearts span:nth-child(26) { --left: 84%; --size: 18px; --duration: 18s; --delay: -4s; --heart-color: #bf6943; }
+.falling-hearts span:nth-child(27) { --left: 92%; --size: 14px; --duration: 22s; --delay: -18s; --heart-color: #a84b42; }
+.falling-hearts span:nth-child(28) { --left: 2%; --size: 10px; --duration: 24s; --delay: -12s; --heart-color: #cf8745; }
+.falling-hearts span:nth-child(29) { --left: 57%; --size: 15px; --duration: 19s; --delay: -16s; --heart-color: #a4434a; }
+.falling-hearts span:nth-child(30) { --left: 96%; --size: 11px; --duration: 21s; --delay: -7s; --heart-color: #c56443; }
+
 @media (max-width: 760px) {
   .note-card { padding: 38px 22px 26px; }
   .note-copy p { font-size: 0.98rem; line-height: 1.8; }
   .note-signoff { margin-top: 1rem; }
+  .teddy-trio { margin-top: 1.2rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .note-card { transition: none; }
+  .teddy-trio span { animation: none; }
 }
