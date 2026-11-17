@@ -10,92 +10,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="floating-hearts" aria-hidden="true">
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
-      <span>❤</span>
+    <div class="falling-hearts" aria-hidden="true">
+      <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
     </div>
 
     <div class="page-shell">
-      <header class="browser-bar">
-        <div class="browser-left">
-          <button class="nav-button" aria-label="Back">←</button>
-          <button class="nav-button" aria-label="Forward">→</button>
-          <button class="nav-button" aria-label="Refresh">⟳</button>
+      <header class="browser-topbar">
+        <div class="browser-tabbar">
+          <div class="tab active">
+            <span class="tab-dot">◌</span>
+            <span>For My Jaan Nadu</span>
+            <span class="close">×</span>
+          </div>
         </div>
 
-        <div class="address-bar-wrap">
-          <div class="lock">🔒</div>
-          <div class="address-bar">rani21969.github.io/nadu-love-site/#love-note</div>
-        </div>
+        <div class="address-strip">
+          <div class="nav-actions">
+            <button aria-label="Back">←</button>
+            <button aria-label="Forward">→</button>
+            <button aria-label="Refresh">↻</button>
+          </div>
 
-        <div class="browser-right">
-          <button class="pill-button">Ask Gemini</button>
-          <button class="icon-button" aria-label="Menu">☰</button>
+          <div class="url-bar">
+            <span class="lock">🔒</span>
+            <span>rani21969.github.io/nadu-love-site/</span>
+          </div>
+
+          <div class="right-actions">
+            <button class="ask-gemini">Ask Gemini</button>
+            <button class="menu-btn">☰</button>
+          </div>
         </div>
       </header>
 
-      <main class="content">
-        <nav class="top-nav" aria-label="Main navigation">
-          <div class="brand">Nadu</div>
-          <div class="nav-links">
-            <a href="#story">Our Story</a>
-            <a href="#moments">Moments</a>
-            <a href="#love-note">Love Note</a>
-          </div>
-        </nav>
-
-        <section class="love-section" id="love-note">
-          <div class="section-label">A Little Note</div>
-          <div class="note-card">
-            <div class="quote-mark">“</div>
-            <p>
-              “Nadu, you are my favorite person in every universe, in every dream, and in every
-              version of my life. I love you more than words can hold, and I am endlessly grateful
-              for the love we share. You are my heart’s truest home.”
-            </p>
-          </div>
-        </section>
-
-        <section class="moments" id="moments">
-          <div class="section-header">
-            <h2>Moments</h2>
+      <main class="site-frame">
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <button aria-label="Back">←</button>
+            <button aria-label="Forward">→</button>
+            <button aria-label="Reload">↻</button>
           </div>
 
-          <div class="photo-grid">
-            <figure class="photo-card tall-card">
-              <img src="images/photo%201.jpeg" alt="My Photo" />
-            </figure>
-            <figure class="photo-card">
-              <img src="images/photo%202.jpeg" alt="My Photo" />
-            </figure>
-            <figure class="photo-card">
-              <img src="images/photo%203.jpeg" alt="My Photo" />
-            </figure>
+          <div class="toolbar-address">
+            <span class="toolbar-lock">🔒</span>
+            <span>rani21969.github.io/nadu-love-site/#love-note</span>
           </div>
-        </section>
 
-        <section class="story" id="story">
-          <div class="section-header">
-            <h2>Our Story</h2>
+          <div class="toolbar-right">
+            <button class="ask-gemini">Ask Gemini</button>
+            <button class="menu-btn">≡</button>
           </div>
-          <div class="story-card">
-            <p>
-              Every chapter of life feels brighter with you in it. From the first smile to the many
-              little moments in between, you have become the calm in my chaos and the joy in every day.
-              This page is a small reminder of how deeply I love you and how lucky I feel to call you mine.
-            </p>
-          </div>
-        </section>
+        </div>
+
+        <div class="page-content">
+          <nav class="top-nav" aria-label="Main navigation">
+            <div class="brand">Nadu</div>
+            <div class="nav-links">
+              <a href="#story">Our Story</a>
+              <a href="#moments">Moments</a>
+              <a href="#love-note">Love Note</a>
+            </div>
+          </nav>
+
+          <section class="love-section" id="love-note">
+            <div class="section-label">A LITTLE NOTE</div>
+            <div class="note-card">
+              <div class="quote-mark">“</div>
+              <p>
+                “Nadu, you are my favorite person in every universe, in every dream, and in every
+                version of my life. I love you more than words can hold, and I am endlessly grateful
+                for the love we share. You are my heart’s truest home.”
+              </p>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   </body>
