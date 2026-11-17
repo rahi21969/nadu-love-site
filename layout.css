@@ -1,11 +1,13 @@
-/* Normalize page width, colors, and navigation at common browser zoom sizes. */
+/* Full-width layout: keep every major panel spanning the available screen. */
 html {
-  font-size: 16px;
   width: 100%;
+  min-width: 320px;
+  font-size: 16px;
 }
 body {
   width: 100%;
   min-width: 320px;
+  margin: 0;
   background:
     radial-gradient(ellipse at 12% 18%, rgba(244, 189, 113, 0.38), transparent 34%),
     radial-gradient(ellipse at 88% 40%, rgba(194, 104, 76, 0.24), transparent 34%),
@@ -13,21 +15,31 @@ body {
 }
 .page-shell {
   box-sizing: border-box;
-  width: min(1320px, calc(100% - 48px));
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 24px clamp(16px, 3vw, 48px) 40px;
+}
+.top-nav,
+.love-section,
+.moments,
+.story,
+.note-card {
+  width: 100%;
+  max-width: none;
 }
 .top-nav {
-  width: 100%;
   min-width: 0;
 }
 .nav-links {
   display: flex;
   align-items: center;
 }
-.note-card {
+.note-copy {
   width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 901px) {
   .top-nav {
@@ -35,7 +47,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     border-radius: 100px;
-    padding: 18px clamp(22px, 3vw, 34px);
+    padding: 18px clamp(22px, 3vw, 42px);
   }
   .nav-links {
     flex-direction: row;
@@ -44,10 +56,7 @@ body {
   }
 }
 @media (max-width: 900px) {
-  .page-shell {
-    width: calc(100% - 40px);
-    margin-top: 24px;
-  }
+  .page-shell { padding: 16px 16px 32px; }
   .top-nav {
     align-items: center;
     flex-direction: column;
@@ -65,7 +74,7 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .page-shell { width: calc(100% - 24px); margin-top: 16px; }
+  .page-shell { padding: 14px 12px 28px; }
   .top-nav { align-items: flex-start; padding: 18px 20px; }
   .nav-links { justify-content: flex-start; gap: 10px 16px; }
 }
