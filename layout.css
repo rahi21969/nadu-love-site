@@ -1,0 +1,53 @@
+/* Keep the site centered and at a comfortable desktop/tablet scale. */
+html {
+  font-size: 16px;
+}
+body {
+  width: 100%;
+  min-width: 320px;
+}
+.page-shell {
+  width: min(1320px, calc(100% - 48px));
+  margin-right: auto;
+  margin-left: auto;
+}
+.top-nav {
+  width: 100%;
+}
+.nav-links {
+  align-items: center;
+}
+.note-card {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .top-nav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 18px clamp(22px, 3vw, 34px);
+  }
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: clamp(16px, 2.4vw, 38px);
+  }
+}
+@media (max-width: 600px) {
+  .page-shell {
+    width: calc(100% - 24px);
+    margin-top: 16px;
+  }
+  .top-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 20px;
+    border-radius: 26px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+}
